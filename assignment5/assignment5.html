@@ -14834,7 +14834,7 @@ to a list using the command <br>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;.DS_Store&#39;, &#39;wdi_data&#39;, &#39;assignment5.ipynb&#39;, &#39;clean_data&#39;, &#39;homeworkscripts&#39;]
+<pre>[&#39;.DS_Store&#39;, &#39;assignment5.html&#39;, &#39;wdi_data&#39;, &#39;assignment5.ipynb&#39;, &#39;clean_data&#39;, &#39;homeworkscripts&#39;]
 </pre>
 </div>
 </div>
@@ -15031,10 +15031,8 @@ you can first find the length of the string and then subtract 4</li>
 <span class="n">list_csv_files</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">list_filenames</span><span class="p">:</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="s2">"wdi_data/"</span> <span class="o">+</span> <span class="n">file</span>
-    <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".csv"</span><span class="p">):</span>
-        <span class="n">is_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="n">list_csv_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">is_csv</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".csv"</span><span class="p">):</span>
+        <span class="n">list_csv_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">file</span> <span class="o">+</span> <span class="s2">" does not end with .csv"</span><span class="p">)</span>
 
@@ -15062,59 +15060,7 @@ you can first find the length of the string and then subtract 4</li>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[&#39;wdi_2020.csv&#39;, &#39;wdi_2000.csv&#39;, &#39;features.xlsx&#39;]
 features.xlsx does not end with .csv
-[     year yearcode                  countryname countrycode  \
-0    2020   YR2020                  Afghanistan         AFG   
-1    2020   YR2020  Africa Eastern and Southern         AFE   
-2    2020   YR2020   Africa Western and Central         AFW   
-3    2020   YR2020                      Albania         ALB   
-4    2020   YR2020                      Algeria         DZA   
-..    ...      ...                          ...         ...   
-261  2020   YR2020           West Bank and Gaza         PSE   
-262  2020   YR2020                        World         WLD   
-263  2020   YR2020                  Yemen, Rep.         YEM   
-264  2020   YR2020                       Zambia         ZMB   
-265  2020   YR2020                     Zimbabwe         ZWE   
-
-     prop_urbanpopulation  
-0               26.026000  
-1               36.828301  
-2               47.857831  
-3               62.112000  
-4               73.733000  
-..                    ...  
-261             76.719000  
-262             56.063764  
-263             37.908000  
-264             44.629000  
-265             32.242000  
-
-[266 rows x 5 columns],      year yearcode                  countryname countrycode  \
-0    2000   YR2000                  Afghanistan         AFG   
-1    2000   YR2000  Africa Eastern and Southern         AFE   
-2    2000   YR2000   Africa Western and Central         AFW   
-3    2000   YR2000                      Albania         ALB   
-4    2000   YR2000                      Algeria         DZA   
-..    ...      ...                          ...         ...   
-261  2000   YR2000           West Bank and Gaza         PSE   
-262  2000   YR2000                        World         WLD   
-263  2000   YR2000                  Yemen, Rep.         YEM   
-264  2000   YR2000                       Zambia         ZMB   
-265  2000   YR2000                     Zimbabwe         ZWE   
-
-     prop_urbanpopulation  
-0               22.078000  
-1               28.772780  
-2               35.337049  
-3               41.741000  
-4               59.919000  
-..                    ...  
-261             71.969000  
-262             46.657852  
-263             26.267000  
-264             34.802000  
-265             33.758000  
-
-[266 rows x 5 columns]]
+[&#39;wdi_2020.csv&#39;, &#39;wdi_2000.csv&#39;]
 </pre>
 </div>
 </div>
