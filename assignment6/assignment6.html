@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>assignment6VC</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>assignment6</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14608,7 +14608,7 @@ Print your Emory code below</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14623,6 +14623,29 @@ Print your Emory code below</p>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2492420
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14772,11 +14795,11 @@ another with weight $\le$ 3000. Use the <code>.query()</code> function.</li>
 <span class="n">subset_abovethreshold</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"weight &gt; @threshold"</span><span class="p">)</span>
 <span class="n">subset_under3000</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"weight &lt;= 3000"</span><span class="p">)</span>
 
-<span class="n">mean_abovethreshold</span> <span class="o">=</span> <span class="n">subset_abovethreshold</span><span class="p">[</span><span class="s2">"weight"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean over 3000:"</span><span class="p">,</span> <span class="n">mean_abovethreshold</span><span class="p">)</span>
+<span class="n">mean_abovethreshold</span> <span class="o">=</span> <span class="n">subset_abovethreshold</span><span class="p">[</span><span class="s2">"acceleration"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean acceleration with cars that weight over 3000 pounds:"</span><span class="p">,</span> <span class="n">mean_abovethreshold</span><span class="p">)</span>
 
-<span class="n">mean_under3000</span> <span class="o">=</span> <span class="n">subset_under3000</span><span class="p">[</span><span class="s2">"weight"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean equal to or under 3000:"</span><span class="p">,</span> <span class="n">mean_under3000</span><span class="p">)</span>
+<span class="n">mean_under3000</span> <span class="o">=</span> <span class="n">subset_under3000</span><span class="p">[</span><span class="s2">"acceleration"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean acceleration with cars that weight equal to or under 3000 pounds:"</span><span class="p">,</span> <span class="n">mean_under3000</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14798,8 +14821,8 @@ another with weight $\le$ 3000. Use the <code>.query()</code> function.</li>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Mean over 3000: 3820.5714285714284
-Mean equal to or under 3000: 2349.4478260869564
+<pre>Mean acceleration with cars that weight over 3000 pounds: 14.7
+Mean acceleration with cars that weight equal to or under 3000 pounds: 16.202173913043477
 </pre>
 </div>
 </div>
@@ -15047,7 +15070,7 @@ Reference the column as <code>`Value(in Euro)`</code> inside .query()</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15068,30 +15091,6 @@ Reference the column as <code>`Value(in Euro)`</code> inside .query()</p>
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>18539
-3216
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
