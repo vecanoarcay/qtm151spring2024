@@ -36,7 +36,7 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
--- Active: 1698674191041@@127.0.0.1@5432@postgres
+-- Active: 1710939886748@@127.0.0.1@5432@vinguicano@public
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
 -- System commands are in upper case and user defined
@@ -102,6 +102,7 @@ Try it yourself!
 
 INSERT INTO drivers VALUES (5, 'Max Verstappen', 'Dutch', 51);
 INSERT INTO drivers VALUES (6, 'Juan Pablo Montoya', 'Colombian', 6);
+INSERT INTO drivers VALUES (7, 'Virginia Cano', 'Venezuelan', 6);
 
 -- SQLBook: Markup
 # <span style="color:darkblue"> II. Dataset Operations </span>
@@ -188,7 +189,8 @@ Try it yourself!
 with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
-SELECT driver_name, nationality, driver_id, victories FROM drivers;
+SELECT driver_name, nationality, driver_id, victories FROM drivers
+WHERE (victories > 60);
 
 -- SQLBook: Markup
 # <span style="color:darkblue"> III. Groupby + Chaining </span>
@@ -216,6 +218,8 @@ Subsetting **after** aggregating
 -- HAVING is the command you use to subset *after* aggregating
 -- This differs from WHERE which is use to subset *before* aggregating
 
+-- check over
+
 SELECT nationality,
        SUM(victories) AS sum_victories,
        AVG(victories) AS mean_victories,
@@ -229,6 +233,7 @@ HAVING SUM(victories) > 50;
 
 Subsetting **before** and **after** aggregating
 -- SQLBook: Code
+-- Active: 1710939886748@@127.0.0.1@5432@vinguicano
 -- HAVING is the command you use to subset *after* aggregating
 -- This differs from WHERE, which is used to subset *before* aggregating
 -- SQL differentiates the two types of subsetting
