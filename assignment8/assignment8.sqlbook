@@ -12,8 +12,8 @@ do not use print())
 -- Active: 1710939886748@@127.0.0.1@5432@postgres
 -- Write your own code
 
-# Instructor Copy
-
+# Virginia Cano
+# Emory ID: 2492420
 -- SQLBook: Markup
 <font size = "5">
 
@@ -166,6 +166,7 @@ HINT: See the lecture 16 for details <br>
 HINT: To insert a string value, use 'single quotations'
 
 -- SQLBook: Code
+-- Active: 1710939886748@@127.0.0.1@5432@vinguicano
 -- Write your own code
 DROP TABLE IF EXISTS lap_times;
 
