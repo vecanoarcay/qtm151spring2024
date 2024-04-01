@@ -116,10 +116,10 @@ HINT: See the end of lectures 16 for details <br>
 -- Active: 1710939886748@@127.0.0.1@5432@vinguicano
 -- Write your own code
 
-SELECT nationality,
+SELECT driver_id,
        AVG(lap_times) AS mean_lap_times
 FROM homework_data
-GROUP BY nationality
+GROUP BY driver_id
 ORDER BY mean_lap_times ASC;
 -- SQLBook: Markup
 <font size = "5">
